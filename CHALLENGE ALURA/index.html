@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="rezthais">
+    <title>ENCRIPTADOR &nbsp;&nbsp;&nbsp;&nbsp/></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/tela.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <div id="barraSuperior" style="display: flex; justify-content: center; align-items: center">
+                    <div id="th1" style="text-align: center;">
+                      <h2 class="typing-animation" id="titulo">3ncr1pt4d0r</h2>
+                    </div>
+                </div>                  
+            </header>
+            <div id="alerta"></div>
+            <div id="txt">
+                <div></div>
+                <div>
+                    <textarea class="txts" rows="15" id="entrada" placeholder="Digite o texto aqui" autofocus="true" required></textarea>
+                </div>
+                <div>
+                    <textarea class="txts" rows="15" id="saida" placeholder="Saída Criptografada" disabled></textarea>
+                </div>
+                <div></div>
+            </div>
+            <div id="troca">   
+                <br>
+                <br>
+                <br>             
+                <div id="botoes">
+                    <button onclick="encriptar()" class="glow-on-hover" type="button" style="font-size: 15px;">Criptografar</button>
+                    <button onclick="descriptar()" class="glow-on-hover" type="button" style="font-size: 15px;">descriptografar</button>
+                    <button onclick="copiaECola()" class="glow-on-hover" type="button" style="font-size: 15px;">copia e cola</button>
+                    <button onclick="limpeza()" class="glow-on-hover" type="button" style="font-size: 15px;">Limpar</button>
+                </div>
+            </div>          
+            <br>
+            <br>
+            <br>
+            <footer>
+                <div id="meusLinks"> 
+                    <a href="https://www.linkedin.com/in/arezendethais/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2x corRoxa"></i></a>
+                    <a href="https://github.com/rezthais" target="_blank"><i class="fa-brands fa-git-alt fa-2x corRoxa"></i></a>
+                    <a href="javascript:void(0)" onclick="share()"><i class="fa-solid fa-share-nodes fa-2x corRoxa"></i></a>
+                </div>
+            </footer>
+        </main>
+    </body>
+    <script src="https://kit.fontawesome.com/e801e4a6d3.js" crossorigin="anonymous"></script>
+    <script src="js/btns-copiar-limpar.js" defer></script>
+    <script src="js/criptografar.js" defer></script>
+    <script src="js/descriptografar.js" defer></script>
+</html>

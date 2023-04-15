@@ -1,0 +1,194 @@
+body, textarea, button{
+    background: linear-gradient(to bottom, #fffda3, #6b4a58);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#barraSuperior {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: linear-gradient(to bottom, #542a3c, #6b4a58);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    justify-items:center;
+    align-items: center;
+    
+}
+#titulo {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border-right: 2px solid rgba(255, 255, 255, 255);
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    user-select: none;
+    font-size: 1.5em;
+}
+
+#botoes{
+    text-align: center;  
+}
+
+#aviso {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    color: rgb(231, 38, 205);
+    font-variant: small-caps;
+    font-stretch: expanded;
+}
+#txt {
+    display: grid;
+    grid-template-columns:1fr 4fr 4fr 1fr;
+    text-align: center;
+}
+.txts {
+    width: 90%;
+    height: 100%;
+    margin-bottom: 30px;
+    resize: none;
+    color: black;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 10px;
+    border: 1px #ffffff;
+}
+.typing-animation {    
+    animation: blinkCursor 1s 400ms steps(20) normal infinite, typing 4s steps(20) normal 5s;
+}
+@keyframes typing {
+    from{
+        width: 0em;
+    }
+    to {
+        width: 11.5rem;
+    }
+}
+@keyframes blinkCursor {
+    from{
+        border-right-color: rgba(255,255,255,0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+.glow-on-hover {
+    background: linear-gradient(to bottom, #542a3c, #6b4a58);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #542a3c, #6b4a58
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #542a3c, #6b4a58;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#alerta {
+    display: flex;
+    color: #6b4a58;
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#alerta1 {
+    display: flex;
+     align-items: center;
+     justify-content: center;
+}
+#alerta2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#meusLinks {
+    padding: 30px 0px 30px;
+    display: flex;
+    background: linear-gradient(to bottom, #542a3c, #6b4a58);
+    justify-content: center;
+    grid-gap:10%;
+}
+.corRoxa {
+    color: #331a25;
+}
+@media screen and (max-width: 800px) {
+
+    #troca {
+        display: grid;
+    }
+    #alerta {
+        order: 2;
+    }
+    #botoes {
+        order: 1;
+    }
+}
+/* Estilos para o modal de fundo */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+
+
